@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 500;
 }
 
 nav {
@@ -41,7 +47,12 @@ nav {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 20px;
-  padding: 40px;
+}
+
+.nav-links li:not(:last-child)::after {
+  content: " \007C";
+  color: antiquewhite;
+  padding-left: 50px;
 }
 
 .burger {
@@ -99,6 +110,10 @@ footer > .social-icons {
   }
   .nav-links li {
     opacity: 0;
+  }
+
+  .nav-links li:not(:last-child)::after {
+    display: none;
   }
 
   .burger {
