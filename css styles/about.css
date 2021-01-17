@@ -68,6 +68,19 @@ nav {
   transition: all 0.3s ease;
 }
 
+.main-section {
+  margin-top: 13vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.portrait {
+  width: 500px;
+  height: 500px;
+}
 footer {
   display: flex;
   justify-content: center;
