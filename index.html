@@ -52,7 +52,7 @@
           Our goal is to provide a complete nurturing environment for the growth
           and development of our little angels
         </p>
-        <p>Your children is safe with us!</p>
+        <p>Your children are safe with us!</p>
         <a href="about.html" class="link-button">Learn More...</a>
       </div>
     </div>
@@ -89,23 +89,94 @@
                 >
               </p>
             </div>
-            <div id="caption"></div>
           </div>
         </div>
+
         <div class="image-link">
           <h3>Our Staff</h3>
           <a href="">
             <img class="small-img" src="/images/" alt="" />
           </a>
         </div>
+
+        <!--GALLARY MODAL-->
+
         <div class="image-link">
           <h3>Gallary</h3>
-          <a href="">
+    
             <img
-              class="small-img"
+              id="openGallaryModal"
+              class="small-img hover-shadow cursor"
               src="/images/erika-fletcher-YfNWGrQI3a4-unsplash.jpg"
-              alt=""
+              alt="writing hands"
+              onclick="openModal();currentSlide(1)"
+    
             />
+            <div id="gallaryModal" class="gallary-modal">
+
+              <!--Modal Close Button-->
+
+              <span class="closeGallaryModal">&times;</span>
+
+              <!--Modal Content-->
+
+              <div class="gallary-modal-content">
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">1 / 6</div>
+                  <img src="/images/Modal Gallary/123593583_139289551264766_8274186435553590079_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="/images/Modal Gallary/123623477_139289617931426_3620182182014073168_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="/images/Modal Gallary/123685945_139288534598201_199489947515683190_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <div class="gallarySlides fade">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
+                </div>
+
+                <!--Prev & Next-->
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(1)" alt="Sample image 1" />
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(2)" alt="Sample image 2" />
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(3)" alt="Sample image 3" />
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(4)" alt="Sample image 4" />
+                </div>
+
+              </div>
+
+            </div>
+
           </a>
         </div>
       </section>
