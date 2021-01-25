@@ -18,9 +18,10 @@
     <nav>
       <div class="logo">
         <img
-          src="/images/Logo.png"
+          src="/images/landscape-logo.png"
           alt="Israel's Angels Educare logo"
           class="img-logo"
+          style="height: 120px;"
         />
       </div>
       <ul class="nav-links">
@@ -37,6 +38,8 @@
           <a href="/html pages/contact.html">Contact Us</a>
         </li>
       </ul>
+
+      <button class="donate-btn" id="donateBtn">Donate</button>
 
       <div class="burger">
         <div class="line1"></div>
@@ -63,10 +66,11 @@
         <div class="image-link">
           <h3>Our Programmes</h3>
           <!--Image Modal-->
+          
           <img
             class="small-img"
             id="openModal"
-            src="/images/john-doyle-RSgwLqIWH8w-unsplash.jpg"
+            src="/images/Icons/primary-education-1512311-1281770.png"
             alt=""
           />
           <div id="imgModal" class="modal">
@@ -95,7 +99,7 @@
         <div class="image-link">
           <h3>Our Staff</h3>
           <a href="">
-            <img class="small-img" src="/images/" alt="" />
+            <img class="small-img" src="/images/staff-icon-1.png" alt="" />
           </a>
         </div>
 
@@ -107,7 +111,7 @@
             <img
               id="openGallaryModal"
               class="small-img hover-shadow cursor"
-              src="/images/erika-fletcher-YfNWGrQI3a4-unsplash.jpg"
+              src="/images/Icons/Gallary-icon.png"
               alt="writing hands"
               onclick="openModal();currentSlide(1)"
     
@@ -123,33 +127,28 @@
               <div class="gallary-modal-content">
 
                 <div class="gallarySlides fade">
-                  <div class="numbertext">1 / 6</div>
-                  <img src="/images/Modal Gallary/123593583_139289551264766_8274186435553590079_n (1).jpg" class="gallary-img" />
+                  <div class="numbertext">1 / 5</div>
+                  <img src="/images/Modal Gallary/Tersia.jpg" class="gallary-img" />
                 </div>
 
                 <div class="gallarySlides fade">
-                  <div class="numbertext">2 / 6</div>
-                  <img src="/images/Modal Gallary/123623477_139289617931426_3620182182014073168_n (1).jpg" class="gallary-img" />
+                  <div class="numbertext">2 / 5</div>
+                  <img src="/images/Modal Gallary/Tersia holding books.jpg" class="gallary-img" />
                 </div>
 
                 <div class="gallarySlides fade">
-                  <div class="numbertext">3 / 6</div>
-                  <img src="/images/Modal Gallary/123685945_139288534598201_199489947515683190_n (1).jpg" class="gallary-img" />
+                  <div class="numbertext">3 / 5</div>
+                  <img src="/images/Modal Gallary/Tersia&educator.jpg" class="gallary-img" />
                 </div>
 
                 <div class="gallarySlides fade">
-                  <div class="numbertext">4 / 6</div>
-                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
+                  <div class="numbertext">4 / 5</div>
+                  <img src="/images/Modal Gallary/Jolene.jpg" class="gallary-img" />
                 </div>
 
                 <div class="gallarySlides fade">
-                  <div class="numbertext">5 / 6</div>
-                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
-                </div>
-
-                <div class="gallarySlides fade">
-                  <div class="numbertext">6 / 6</div>
-                  <img src="/images/Modal Gallary/123798474_139288497931538_4400938549813435287_n (1).jpg" class="gallary-img" />
+                  <div class="numbertext">5 / 5</div>
+                  <img src="/images/Modal Gallary/Group Image.jpg" class="gallary-img" style="width: 100%;"/>
                 </div>
 
                 <!--Prev & Next-->
@@ -161,16 +160,20 @@
                   <p id="caption"></p>
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(1)" alt="Sample image 1" />
+                  <img class="demo cursor" src="/images/Modal Gallary/Tersia.jpg" style="width: 50%" onclick="currentSlide(1)" alt="Sample image 1" />
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(2)" alt="Sample image 2" />
+                  <img class="demo cursor" src="/images/Modal Gallary/Tersia holding books.jpg" style="width: 50%" onclick="currentSlide(2)" alt="Sample image 2" />
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(3)" alt="Sample image 3" />
+                  <img class="demo cursor" src="/images/Modal Gallary/Tersia&educator.jpg" style="width: 50%" onclick="currentSlide(3)" alt="Sample image 3" />
                 </div>
                 <div class="column">
-                  <img class="demo cursor" src="placeholder.png" style="width: 100%" onclick="currentSlide(4)" alt="Sample image 4" />
+                  <img class="demo cursor" src="/images/Modal Gallary/Jolene.jpg" style="width: 50%" onclick="currentSlide(4)" alt="Sample image 4" />
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="/images/Modal Gallary/Group Image.jpg" style="width: 50%" onclick="currentSlide(4)"
+                    alt="Sample image 4" />
                 </div>
 
               </div>
@@ -180,7 +183,11 @@
           </a>
         </div>
       </section>
+      <section class="footer-section">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint debitis animi dicta ducimus vero reprehenderit quam facere? Blanditiis nihil, rem necessitatibus reprehenderit reiciendis eaque omnis, esse voluptates harum suscipit voluptatem? Distinctio minus velit quas temporibus consequuntur? Non excepturi explicabo incidunt in quos ex a alias amet unde beatae repellat iure accusamus perspiciatis fuga laboriosam, fugiat natus. Hic consectetur dolorum delectus placeat ut sequi quia doloremque laudantium, voluptatibus architecto accusantium voluptates repellat cupiditate, voluptatum quam vitae et. Labore optio neque similique at ducimus id tempora voluptate officiis, iusto assumenda dolorem. Molestiae, hic animi illo ducimus sequi architecto provident. Delectus ducimus, deleniti iure id impedit quasi soluta tempore minus labore fugit rem hic eaque, dignissimos odio odit magnam laboriosam sunt ipsum eveniet ad quibusdam. Libero ab harum quas placeat quibusdam accusantium perferendis sapiente commodi consequuntur velit nobis, nihil sed voluptatem laboriosam iusto, ipsam minima, modi quos odit odio dolores excepturi voluptate? Nulla?</p>
+      </section>
     </main>
+
     <footer>
       <a href="https://www.facebook.com/" class="social-icons">
         <i class="fa fa-facebook-official"></i>

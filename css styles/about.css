@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +10,9 @@
 body {
   font-family: "Shadows Into Light", cursive;
   font-weight: 500;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 nav {
@@ -15,8 +20,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #554499;
-  box-shadow: 0 8px 6px -6px black;
+  background-color: #fff;
+  box-shadow: 0 8px 6px -6px red;
   position: fixed;
   top: 0;
   right: 0;
@@ -25,7 +30,7 @@ nav {
 }
 
 .logo {
-  color: antiquewhite;
+  color: red;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -42,7 +47,7 @@ nav {
 }
 
 .nav-links a {
-  color: antiquewhite;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 3px;
@@ -51,8 +56,19 @@ nav {
 
 .nav-links li:not(:last-child)::after {
   content: " \007C";
-  color: antiquewhite;
+  color: red;
   padding-left: 50px;
+}
+
+.donate-btn {
+  background-color: #e40b5d;
+  border: 2px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
 }
 
 .burger {
@@ -63,30 +79,115 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: antiquewhite;
+  background-color: red;
   margin: 5px;
   transition: all 0.3s ease;
 }
 
-.main-section {
-  margin-top: 13vh;
+.main-container {
+  margin: 20px;
+  padding: 20px;
+  height: 1500px;
+  display: relative;
 }
 
-.row {
+.main-section {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  overflow: auto;
+  height: auto;
+}
+
+.about-text-box {
+  text-align: center;
+  padding: 20px;
+  overflow-wrap: break-word;
+}
+
+.about-text-box p {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  padding: 10px;
+}
+
+.about-container {
   display: flex;
   flex-direction: row;
+  height: 80vh;
+}
+.column {
+  width: 500px;
 }
 
 .portrait {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 500px;
+  height: ;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+
+.mission-statement {
+  background-color: #e40b5d;
+  color: #fff;
+}
+
+.column-2 {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.avatar-img {
+  height: 300px;
+  width: 100%;
+}
+
+.image-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  height: 25%;
+  padding: 16px;
+}
+
+.card-container::after,
+.row-2::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.image-card-btn {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.image-card-btn:hover {
+  background-color: #555;
+}
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 8vh;
-  background-color: #554499;
+  background-color: #fff;
   box-shadow: 0 8px 6px -6px black;
   position: fixed;
   bottom: 0;
@@ -96,7 +197,7 @@ footer {
 }
 
 footer > .social-icons {
-  color: antiquewhite;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 3px;
@@ -108,12 +209,13 @@ footer > .social-icons {
   body {
     overflow-x: hidden;
   }
+
   .nav-links {
     position: absolute;
     right: 0;
     height: 92vh;
     top: 8vh;
-    background-color: #554499;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,6 +223,7 @@ footer > .social-icons {
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
+
   .nav-links li {
     opacity: 0;
   }
@@ -129,7 +232,23 @@ footer > .social-icons {
     display: none;
   }
 
+  .donate-btn {
+    display: none;
+  }
+
   .burger {
+    display: block;
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .column-2 {
+    width: 100%;
     display: block;
   }
 }

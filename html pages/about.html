@@ -14,7 +14,12 @@
   <body>
     <nav>
       <div class="logo">
-        <h4>MY NAV</h4>
+        <img
+          src="/images/landscape-logo.png"
+          alt="Israel's Angels Educare logo"
+          class="img-logo"
+          style="height: 120px"
+        />
       </div>
       <ul class="nav-links">
         <li>
@@ -31,6 +36,8 @@
         </li>
       </ul>
 
+      <button class="donate-btn" id="donateBtn">Donate</button>
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -38,10 +45,11 @@
       </div>
     </nav>
 
-    <main class="main-section">
-      <h1 class="main-heading">About Us</h1>
+    <!--MAIN CONTENT-->
 
-      <div class="row">
+    <main class="main-container">
+      <!--About-->
+      <section class="main-section about-container">
         <div class="column">
           <img
             src="/images/3efb195f0cb7561013d1646c36e64ac8.jpg"
@@ -49,33 +57,34 @@
             class="portrait"
           />
         </div>
-        <div class="column">
-          <article>
-            <h2>About Us...</h2>
-            <p>
-              Tersia Williams, founder and one of the members of Israel's Angels
-              Educare Center in Hangberg Hout Bay started the centre from a life
-              long dream and inspired by the passing of her 10 month old baby
-              boy on th 10 of July 2017. With the help of her colleagues who she
-              worked with at a former ECD center, they started with the passion
-              to look after children and teach them and the income they made
-              from selling boerewors rolls, hamburgers and Braai platters. With
-              qualification and experience in the ECD field they were confident
-              enough to start their centre and even had a confirmed list of
-              children on their register!
-            </p>
-            <p>
-              Tersia and her colleagues started with an average of 30 children
-              before opening and on the 1st of June 2018 an estimated of R12 000
-              with weekly profit of the Mama kind se Braai of roughly R1500
-              could afford to rent a bigger premises to accomodate more than 60
-              children, keep the center and the braai stand running. The braai
-              stand enabled them to meet all the needs of the ECD centre.
-            </p>
-          </article>
-        </div>
-      </div>
-      <section class="mission-statement">
+        <article class="about-text-box">
+          <h2>About Us...</h2>
+          <p>
+            Tersia Williams, founder and one of the members of Israel's Angels
+            Educare Center in Hangberg Hout Bay started the centre from a life
+            long dream and inspired by the passing of her 10 month old baby boy
+            on th 10 of July 2017. With the help of her colleagues who she
+            worked with at a former ECD center, they started with the passion to
+            look after children and teach them and the income they made from
+            selling boerewors rolls, hamburgers and Braai platters. With
+            qualification and experience in the ECD field they were confident
+            enough to start their centre and even had a confirmed list of
+            children on their register!
+          </p>
+          <p>
+            Tersia and her colleagues started with an average of 30 children
+            before opening and on the 1st of June 2018 an estimated of R12 000
+            with weekly profit of the Mama kind se Braai of roughly R1500 could
+            afford to rent a bigger premises to accomodate more than 60
+            children, keep the center and the braai stand running. The braai
+            stand enabled them to meet all the needs of the ECD centre.
+          </p>
+        </article>
+      </section>
+
+      <!--Mission-->
+
+      <section class="main-section mission-statement">
         <h2>Mission & Philosophy</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
@@ -87,24 +96,63 @@
           deleniti voluptatem nobis. Sequi, esse saepe. Similique, sunt id.
         </p>
       </section>
-      <section>
-        <h2>What we offer</h2>
-        <div class="programs-container">
-        <div>
-          <h3>Curicculum</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            exercitationem repellat sint eum officiis at officia commodi dolorem
-            nam iste, quaerat omnis deserunt cum beatae ipsa ut optio. Deleniti,
-            repellendus.
-          </p>
-        </div>
-        <div>
-         
-        <div></div>
+
+      <section class="main-section image-card-section">
+        <h2>Meet Our Staff</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur a
+          ipsa velit iste consequatur placeat, impedit ipsam consequuntur
+          explicabo culpa cumque exercitationem? Ut, officia nemo! Quos tempora
+          magnam nemo consectetur.
+        </p>
+        <br />
+
+        <div class="row-2">
+          <div class="column-2">
+            <div class="image-card">
+              <img src="/images/myavatar.png" alt="Tersia" class="avatar-img" />
+              <div class="card-container">
+                <h2>Tersia Williams</h2>
+                <p class="title">Founder & Teacher</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="image-card-btn">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column-2">
+            <div class="image-card">
+              <img src="/images/myavatar.png" alt="Jolene" class="avatar-img" />
+              <div class="card-container">
+                <h2>Natalie Julies</h2>
+                <p class="title">Teacher</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="image-card-btn">Contact</button></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="column-2">
+            <div class="image-card">
+              <img src="/images/myavatar.png" alt="Mary" class="avatar-img" />
+              <div class="card-container">
+                <h2>Mary</h2>
+                <p class="title">Teacher</p>
+                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                <p>example@example.com</p>
+                <p><button class="image-card-btn">Contact</button></p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+    <!--END OF MAIN CONTENT-->
+
+    <!--FOOTER CONTENT-->
+
     <footer>
       <a href="https://www.facebook.com/" class="social-icons">
         <i class="fa fa-facebook-official"></i>

@@ -17,22 +17,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  box-shadow: 0 8px 6px -6px rgb(190, 181, 181);
+  background-color: #fff;
+  box-shadow: 0 8px 6px -6px red;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 2;
-}
-
-.img-logo {
-  color: antiquewhite;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
-  width: 250px;
-  height: 100px;
-  padding: 20px 0;
 }
 
 .nav-links {
@@ -56,8 +47,19 @@ nav {
 
 .nav-links li:not(:last-child)::after {
   content: " \007C";
-  color: white;
+  color: red;
   padding-left: 50px;
+}
+
+.donate-btn {
+  background-color: #e40b5d;
+  border: 2px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
 }
 
 .burger {
@@ -84,7 +86,7 @@ nav {
       rgba(45, 7, 180, 0.466),
       rgba(252, 255, 70, 0.486)
     ),
-    url(/images/banner.jpg);
+    url(/images/banner-2.jpg);
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -140,36 +142,41 @@ nav {
   border: white 2px solid;
 }
 
-/*MODAL CONTENT*/
-
-main {
-  background-repeat: no-repeat;
-  background-image: url("/images/61286651-vector-background-with-watercolor-ink-blots-and-brush-strokes-colorful-creative-artistic-pattern-hor.jpg")
-    fixed no-repeat;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  visibility: inherit;
-  z-index: 1;
-}
-
 /*IMAGE CARDS*/
 
 .image-link-container {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
 }
 
-.small-img {
-  width: 200px;
+h3 {
+  font-size: 1.5em;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.image-link {
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
   height: 200px;
 }
 
+.small-img {
+  width: 100px;
+  height: 100px;
+
+  position: relative;
+}
+
 .small-img:hover {
+  width: 120px;
+  height: 120px;
   opacity: 0.6;
   cursor: pointer;
+  transition: 2s;
 }
 
 .row > .column {
@@ -192,7 +199,7 @@ main {
   display: none;
   position: fixed;
   z-index: 2000;
-  padding-top: 150px;
+  padding-top: 20px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -206,7 +213,9 @@ main {
 /*MODAL CONTENT*/
 
 .modal-content {
-  background-color: #fefefe;
+  background-image: url(/images/Splashes.jpg);
+  background-position: center;
+  background-size: cover;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -214,7 +223,7 @@ main {
   height: 50%;
 }
 
-.gallaryModalContent {
+.gallary-modal-content {
   background-color: #fefefe;
   position: relative;
   margin: auto;
@@ -249,10 +258,21 @@ main {
 
 .gallarySlides {
   display: none;
+  height: 75vh;
 }
 
 .cursor {
   cursor: pointer;
+}
+
+/*GALLARY IMAGES*/
+
+.gallary-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 100%;
 }
 
 /* Fading animation */
@@ -347,22 +367,27 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.gallary-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 30%;
-}
-
 /*FOOTER SECTION*/
+
+.footer-section {
+  border-top: 3px red solid;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(171, 206, 48),
+    rgba(250, 26, 13),
+    rgba(14, 139, 196),
+    rgba(253, 141, 4)
+  );
+  opacity: 70%;
+  height: 250px;
+}
 
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 8vh;
-  background-color: #fffff4;
+  background-color: #fff;
   box-shadow: 0 8px 6px -6px black;
   position: fixed;
   bottom: 0;
@@ -379,6 +404,8 @@ footer > .social-icons {
   font-size: 20px;
   padding: 30px;
 }
+
+/*MEDIA QUERIES*/
 
 @media screen and (max-width: 768px) {
   body {
@@ -402,6 +429,10 @@ footer > .social-icons {
   }
 
   .nav-links li:not(:last-child)::after {
+    display: none;
+  }
+
+  .donate-btn {
     display: none;
   }
 

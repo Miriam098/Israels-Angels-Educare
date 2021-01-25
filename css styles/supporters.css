@@ -15,8 +15,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #554499;
-  box-shadow: 0 8px 6px -6px black;
+  background-color: #fff;
+  box-shadow: 0 8px 6px -6px red;
   position: fixed;
   top: 0;
   right: 0;
@@ -25,7 +25,7 @@ nav {
 }
 
 .logo {
-  color: antiquewhite;
+  color: red;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -42,7 +42,7 @@ nav {
 }
 
 .nav-links a {
-  color: antiquewhite;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 3px;
@@ -51,7 +51,7 @@ nav {
 
 .nav-links li:not(:last-child)::after {
   content: " \007C";
-  color: antiquewhite;
+  color: red;
   padding-left: 50px;
 }
 
@@ -63,9 +63,20 @@ nav {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: antiquewhite;
+  background-color: red;
   margin: 5px;
   transition: all 0.3s ease;
+}
+
+.donate-btn {
+  background-color: #e40b5d;
+  border: 2px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
 }
 
 footer {
@@ -73,7 +84,7 @@ footer {
   justify-content: center;
   align-items: center;
   min-height: 8vh;
-  background-color: #554499;
+  background-color: #fff;
   box-shadow: 0 8px 6px -6px black;
   position: fixed;
   bottom: 0;
@@ -83,7 +94,7 @@ footer {
 }
 
 footer > .social-icons {
-  color: antiquewhite;
+  color: red;
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 3px;
@@ -113,6 +124,10 @@ footer > .social-icons {
   }
 
   .nav-links li:not(:last-child)::after {
+    display: none;
+  }
+
+  .donate-btn {
     display: none;
   }
 
