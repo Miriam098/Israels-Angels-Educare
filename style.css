@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +31,15 @@ nav {
   width: 50%;
 }
 
+.nav-links ul {
+  padding: 10 20px;
+}
+
 .nav-links li {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   list-style: none;
   height: 50%;
 }
@@ -43,6 +50,12 @@ nav {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 20px;
+  padding: 0 20px;
+}
+
+.nav-links a:hover {
+  color: navy;
+  transition: 0.5s;
 }
 
 .nav-links li:not(:last-child)::after {
@@ -162,6 +175,11 @@ h3 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 300px;
   height: 200px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 254, 254, 0.5),
+    rgba(0, 0, 128, 0.452)
+  );
 }
 
 .small-img {
@@ -195,7 +213,8 @@ h3 {
 /*MODALS*/
 
 .modal,
-.gallary-modal {
+.gallary-modal,
+.parents-modal {
   display: none;
   position: fixed;
   z-index: 2000;
@@ -210,12 +229,18 @@ h3 {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
+.modal {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 254, 254),
+    rgb(248, 72, 72),
+    rgb(255, 254, 254)
+  );
+}
 /*MODAL CONTENT*/
 
 .modal-content {
-  background-image: url(/images/Splashes.jpg);
-  background-position: center;
-  background-size: cover;
+  background-color: white;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
@@ -232,10 +257,20 @@ h3 {
   max-width: 1200px;
 }
 
+.parents-modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 50%;
+}
+
 /*CLOSE BTNS*/
 
 .close,
-.closeGallaryModal {
+.closeGallaryModal,
+.parents-close-btn {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -248,7 +283,9 @@ h3 {
 .close:hover,
 .close:focus,
 .closeGallaryModal:hover,
-.closeGallaryModal:focus {
+.closeGallaryModal:focus,
+.parentsCloseBtn:hover,
+.parentsCloseBtn:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
@@ -327,6 +364,11 @@ h3 {
   border-radius: 3px 0 0 3px;
 }
 
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
@@ -363,13 +405,11 @@ img.hover-shadow {
   transition: 0.3s;
 }
 
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 /*FOOTER SECTION*/
 
 .footer-section {
+  display: flex;
+  flex-direction: row;
   border-top: 3px red solid;
   background-image: linear-gradient(
     to right bottom,
@@ -466,4 +506,39 @@ footer > .social-icons {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: red;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {
+    background: blue;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+  }
 }

@@ -31,8 +31,9 @@ let modal = document.getElementById("imgModal");
 let btn = document.getElementById("openModal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
+//GETTING GALLARY MODAL ELEMENTS
 let modalTwo = document.getElementById("gallaryModal");
 
 // Get the button that opens the modal
@@ -84,10 +85,10 @@ function currentSlide(n) {
   showSlides((slideIndex = n));
 }
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("gallarySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
+  let i;
+  let slides = document.getElementsByClassName("gallarySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
   if (n > slides.length) {
     slideIndex = 1;
   }
