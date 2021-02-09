@@ -9,12 +9,6 @@ html body {
   font-family: "Shadows Into Light", cursive;
   font-weight: 500;
   overflow: visible;
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 254, 254, 0.685),
-    rgba(11, 11, 167, 0.247),
-    rgba(255, 254, 254, 0.658) 100%
-  );
 }
 
 nav {
@@ -29,15 +23,6 @@ nav {
   right: 0;
   left: 0;
   z-index: 1030;
-}
-
-.logo {
-  color: red;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
-  width: 250px;
-  height: 100px;
 }
 
 .nav-links {
@@ -94,8 +79,10 @@ nav {
 }
 
 main {
-  margin-top: 15vh;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10vh;
 }
 
 main > section {
@@ -105,10 +92,10 @@ main > section {
 iframe {
   display: flex;
   margin: auto;
-  margin-top: 10vh;
+  margin-top: 7vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  height: 50vh;
   pointer-events: none;
 }
 
@@ -130,10 +117,15 @@ h3,
 .fa {
   font-size: 2rem;
 }
+i {
+  justify-content: center;
+  align-items: center;
+}
 
 .contact-box {
   display: inline-flex;
   padding: 10px;
+  height: 50vh;
 }
 
 .contact-info {
@@ -175,15 +167,15 @@ footer > .social-icons {
 }
 
 @media screen and (max-width: 768px) {
-  /* body {
+  body {
     overflow-x: hidden;
-  }*/
+  }
   .nav-links {
     position: absolute;
     right: 0;
     height: 92vh;
     top: 8vh;
-    background-color: #554499;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;

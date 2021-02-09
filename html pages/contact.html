@@ -41,12 +41,15 @@
     </nav>
 
     <main>
-        
       <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.4341182834755!2d18.343049515215142!3d-34.05838418060425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc69dfdec01727%3A0x59e906fcf2aaeca9!2sIsrael&#39;s%20Angels%20Educare!5e0!3m2!1sen!2sza!4v1612510092994!5m2!1sen!2sza"
+         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+     <!-- <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26449.24694909128!2d18.332491396870118!3d-34.03987260897771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x59e906fcf2aaeca9!2sIsrael&#39;s%20Angels%20Educare!5e0!3m2!1sen!2sza!4v1611241528683!5m2!1sen!2sza"
         width="400" height="300" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
         tabindex="0" allowfullscreen>
-      </iframe>
+      </iframe> -->
       <section class="contact-container">
 
         <h2>Contact</h2>
@@ -55,9 +58,11 @@
         <div class="contact-info">
          
           <div class="contact-box">
+            
           <span class="icon">
           <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
           </span>
+            
           <div>
           <h3>Our Address</h3>
           <p>
@@ -87,7 +92,7 @@
           </span>
           <div>
           <h3>Drop an Email</h3>
-          <a href="mailto:">example@gmail.com</a>
+          <a href="mailto:tersiawilliams28@gmail.com">tersiawilliams28@gmails.com</a>
           </div>
 
           </div>
@@ -108,7 +113,33 @@
         <i class="fa fa-instagram"></i>
       </a>
     </footer>
+    <!--<div id="map"></div>
+    <script>
+      function initMap() {
+      let options = {
+        zoom: 12,
+        center: {lat: -34.0477619, lng: 18.356681}
+      }
+      let map = new google.maps.Map(document.getElementById("map"), options);
 
-    <script src="../script.js"></script>
+      //Add MArker
+
+      let marker = new google.maps.Marker({
+        position: {lat: -34.0583822, lng: 18.3447393},
+          map:map
+        
+      });
+
+      let infoWindow = new google.maps.infoWindow({
+        content:'<h1>Israel\'s Angels Educare</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+     }
+    </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ56XPSXSuLZZUuqwGN1haWLD-ECtcyyA&callback=initMap">
+    </script>-->
   </body>
 </html>

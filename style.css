@@ -122,8 +122,33 @@ nav {
   transition-duration: 1s;
 }
 
+.banner-text span {
+  text-transform: uppercase;
+  display: block;
+}
 .banner-text h1 {
-  font-size: 46px;
+  color: white;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+
+  position: relative;
+  animation: text 4s 1;
+}
+.text2 {
+  font-size: 30px;
+  color: navy;
+}
+@keyframes text {
+  0% {
+    color: red;
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 25px;
+    margin-bottom: -40px;
+  }
 }
 
 .banner-text p {

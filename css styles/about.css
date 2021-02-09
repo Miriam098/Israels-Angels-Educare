@@ -32,11 +32,8 @@ nav {
   z-index: 1030;
 }
 
-.logo {
-  color: red;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
+.img-logo {
+  height: 120px;
 }
 
 .nav-links {
@@ -224,6 +221,52 @@ footer > .social-icons {
   padding: 30px;
 }
 
+@media screen and (max-width: 320px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow-wrap: normal;
+    font-size: 16px;
+    height: 100%;
+  }
+  nav {
+    margin: 0;
+    padding: 0;
+  }
+  nav .img-logo {
+    height: 50px;
+    width: 100px;
+  }
+  .main-section {
+    margin: auto;
+  }
+  .portrait {
+    display: none;
+  }
+  .about-container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .about-text-box {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+  .mission-statement {
+    height: 50%;
+    width: 100%;
+  }
+}
+/*Small Phones*/
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
