@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -100,14 +101,13 @@ nav {
       rgba(252, 255, 70, 0.486)
     ),
     url(/images/banner-2.jpg);
-  height: 50%;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: 12vh;
   width: 100%;
-  margin-top: 13vh;
+
   border-bottom: red 3px solid;
 }
 
@@ -451,7 +451,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 8vh;
   background-color: #fff;
   box-shadow: 0 8px 6px -6px black;
   position: fixed;
