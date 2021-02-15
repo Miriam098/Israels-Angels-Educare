@@ -97,25 +97,6 @@ nav {
 /*BANNER SECTION*/
 
 .banner-container {
-<<<<<<< HEAD
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(252, 255, 70, 0.486),
-      rgba(255, 254, 254, 0.5),
-      rgba(248, 72, 72, 0.5),
-      rgba(45, 7, 180, 0.466),
-      rgba(252, 255, 70, 0.486)
-    ),
-    url(/images/banner-2.jpg);
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-
-  border-bottom: red 3px solid;
-=======
     background-image: linear-gradient( to right bottom, rgba(252, 255, 70, 0.486), rgba(255, 254, 254, 0.5), rgba(248, 72, 72, 0.5), rgba(45, 7, 180, 0.466), rgba(252, 255, 70, 0.486)), url(/images/banner-2.jpg);
     height: 80%;
     background-position: center;
@@ -126,7 +107,6 @@ nav {
     width: 100%;
     border-bottom: red 3px solid;
     padding: 20px;
->>>>>>> 77818fc640e9180a6037993942e0d09caddc978a
 }
 
 .banner-text {
@@ -471,7 +451,6 @@ img.hover-shadow {
 /*FOOTER SECTION*/
 
 .footer-section {
-<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   border-top: 3px red solid;
@@ -506,17 +485,6 @@ footer > .social-icons {
   letter-spacing: 3px;
   font-size: 20px;
   padding: 30px;
-=======
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 3px red solid;
-    background-image: linear-gradient( to right bottom, rgba(171, 206, 48), rgba(250, 26, 13), rgba(14, 139, 196), rgba(253, 141, 4));
-    opacity: 70%;
-    height: 220px;
->>>>>>> 77818fc640e9180a6037993942e0d09caddc978a
 }
 
 .operating-hours {

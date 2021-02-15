@@ -38,6 +38,14 @@
 
       <button class="donate-btn" id="donateBtn">Donate</button>
 
+      <div id="donateModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+
       <div class="burger">
         <div class="line1"></div>
         <div class="line2"></div>
@@ -46,17 +54,42 @@
     </nav>
     <header class="banner" role="banner">
       <img
-        class="supporters-banner"
+        class="mySlides fade"
         src="/images/Gracie's - Love In A Bowl/Courage_LoveinaBowl_Educare_delivery_day_Hangberg62-scaled.jpg"
         alt="LoveinaBowl_Educare_delivery_day_Hangberg"
       />
+      <div class="w3-content w3-display-container">
+        <img
+          class="mySlides fade"
+          src="/images/Gracie's - Love In A Bowl/130721080_3915687091776402_2058500664361770533_n.jpg"
+        />
+        <img
+          class="mySlides fade"
+          src="/images/Gracie's - Love In A Bowl/131384118_3915686928443085_2574348500947535550_n.jpg"
+        />
+        <img
+          class="mySlides fade"
+          src="/images/Gracie's - Love In A Bowl/132651546_3950384981639946_964690389985849992_n.jpg"
+        />
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </header>
 
     <main>
       <section>
         <div>
           <img
-            src="/images/Gracie's - Love In A Bowl/132651546_3950384981639946_964690389985849992_n.jpg"
+            src="https://loveinabowl.co.za/wp-content/uploads/2020/12/LoveinaBowl_PT_LightBackgrounds_480px.jpg"
             alt="Love in a bowl - pot og veggies"
             class="gracie-garden-img"
           />
@@ -162,6 +195,6 @@
       </a>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="/Javascript/supporters.js"></script>
   </body>
 </html>
