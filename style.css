@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Berkshire+Swash&family=Kaushan+Script&family=Sedgwick+Ave&family=Sriracha&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +7,10 @@
 
 body,
 html {
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Berkshire Swash", cursive;
   font-weight: 500;
   height: 100%;
+  letter-spacing: 3px;
 }
 
 a {
@@ -20,7 +21,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 8vh;
+
   background-color: #fff;
   box-shadow: 0 8px 6px -6px red;
   position: fixed;
@@ -69,6 +70,12 @@ nav {
   padding-left: 50px;
 }
 
+.img-logo {
+  height: 120px;
+}
+
+/*DONATION BUTTON*/
+
 .donate-btn {
   background-color: #e40b5d;
   border: 2px;
@@ -78,8 +85,171 @@ nav {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  cursor: pointer;
 }
 
+.wrapper {
+  background-color: #fff;
+  width: 500px;
+  padding: 25px;
+  margin: 25px auto 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper h2 {
+  background-color: #fcfcfc;
+  color: #7ed321;
+  font-size: 24px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px dotted #333;
+}
+
+h4 {
+  padding-bottom: 5px;
+  color: #7ed321;
+}
+
+.input-group {
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 0;
+}
+
+.input-box {
+  width: 100%;
+  margin-right: 12px;
+  position: relative;
+}
+
+.input-box:last-child {
+  margin-right: 0;
+}
+
+.name {
+  padding: 14px 10px 14px 50px;
+  width: 100%;
+  background-color: #fcfcfc;
+  border: 1px solid #000003;
+  outline: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  border-radius: 3px;
+  color: #333;
+}
+
+.name:focus,
+.dob:focus {
+  box-shadow: 0 0 2px 1px #7ed32180;
+  border: #7ed321;
+}
+
+.input-box .icon {
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  color: #333;
+  background-color: #f1f1f1;
+  border-radius: 2px 0 0 2px;
+  transition: 0.3s;
+  font-size: 20px;
+  pointer-events: none;
+  border: 1px solid #00000033;
+  border-right: none;
+}
+
+.name:focus + .icons {
+  background-color: #7ed321;
+  color: #f1f1f1;
+  border-right: 1px solid #7ed321;
+  border: none;
+  transition: 1s;
+}
+
+.dob {
+  width: 30%;
+  padding: 14px;
+  text-align: center;
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid #c0bfbf;
+  border-radius: 3px;
+}
+
+.radio {
+  display: none;
+}
+
+.input-box label {
+  padding: 13px;
+  background-color: #fcfcfc;
+  display: inline;
+  text-align: center;
+  border: 1px solid #c0bfbf;
+}
+
+.input-box label:first-of-type {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none;
+}
+
+.input-box label:last-of-type {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.radio:checked + label {
+  background-color: #7ed321;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.input-box select {
+  display: inline-block;
+  width: 50%;
+  padding: 12px;
+  background-color: #fcfcfc;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #c0bfbf;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input-box select:focus {
+  background-color: #7ed321;
+  color: #fff;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  background: #7ed321;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.35s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #5eb105;
+}
+
+/*BURGER MENU */
 .burger {
   display: none;
   cursor: pointer;
@@ -196,17 +366,20 @@ nav {
 .image-link-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 30px;
-  height: 70%;
+  justify-content: center;
+  padding: 0 30px 30px 30px;
+  height: 50%;
+}
+
+.image-link-container > h1 {
+  text-align: center;
+  margin: 0 20px 20px 20px;
 }
 
 .service-boxes {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 h3 {
@@ -216,7 +389,6 @@ h3 {
 }
 
 .image-link {
-  margin-left: 120px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 300px;
@@ -460,47 +632,57 @@ img.hover-shadow {
 
 .footer-section {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   border-top: 3px red solid;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(171, 206, 48),
-    rgba(250, 26, 13),
-    rgba(14, 139, 196),
-    rgba(253, 141, 4)
-  );
-  opacity: 70%;
-  height: 220px;
+  height: 40vh;
+  padding: 0 20px;
 }
 
-.operating-hours {
+.footer-section h4 {
+  padding: 20px;
+  margin: 0;
+}
+
+.footer-info-container {
+  display: flex;
+  flex-direction: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-info {
+  text-align: center;
+  width: 25%;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 50px;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 8px 6px -6px black;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  padding: 10px;
 }
 
-.social-media {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-right: 90px;
-  padding: 10px, 10px;
-}
-
-.social-media h4 {
-  margin-left: -50px;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 50px;
+footer .social-icons,
+h4 {
+  color: red;
   text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 20px;
+  padding-right: 30px;
 }
 
 /*MEDIA QUERIES*/

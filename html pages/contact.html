@@ -31,7 +31,98 @@
         </li>
       </ul>
 
-      <button class="donate-btn" id="donateBtn">Donate</button>
+      <div class="donate-modal">
+        <button class="donate-btn openModal" id="donateBtn">Donate</button>
+        <div id="buttonModal" class="modal">
+          <!--Modal Close Button-->
+      
+          <span class="close">&times;</span>
+          
+          <!--Form Container-->
+          <div class="wrapper">
+            <h2>Payment Form</h2>
+            <form action="" method="POST">
+              <h4>Account</h4>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <input type="text" placeholder="Full Name" required class="name" />
+                  <i class="fa fa-user icon"></i>
+                </div>
+              </div>
+          
+              <div class="input-box">
+                <input type="text" name="" id="" placeholder="Nick Name" required class="name" />
+                <i class="fa fa-user icon"></i>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <input type="email" placeholder="Email Address" required class="name" />
+                  <i class="fa fa-envelope icon"></i>
+                </div>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <h4>Date of Birth</h4>
+                  <input type="text" placeholder="DD" class="dob" />
+                  <input type="text" placeholder="MM" class="dob" />
+                  <input type="text" placeholder="YYYY" class="dob" />
+                </div>
+              </div>
+          
+              <div class="input-box">
+                <input type="radio" name="gender" id="b1" checked class="radio" />
+                <label for="b1">Male</label>
+                <input type="radio" name="gender" id="b2" class="radio" />
+                <label for="b2">Female</label>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <h4>Payment Details</h4>
+                  <input type="radio" name="pay" id="bc1" checked class="radio" />
+                  <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+                  <input type="radio" name="pay" id="bc2" class="radio" />
+                  <label for="bc2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+                </div>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <input type="tel" name="" id="" placeholder="Card Number" class="name" />
+                  <i class="fa fa-credit-card icon"></i>
+                </div>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <input type="tel" name="" id="" placeholder="Card CVC" required class="name" />
+                  <i class="fa fa-user icon"></i>
+                </div>
+              </div>
+          
+              <div class="input-box">
+                <select name="" id="">
+                  <option value="">01 jun</option>
+                  <option value="">02 jun</option>
+                  <option value="">03 jun</option>
+                </select>
+                <select name="" id="">
+                  <option value="">2020</option>
+                  <option value="">2021</option>
+                  <option value="">2022</option>
+                </select>
+              </div>
+          
+              <div class="input-group">
+                <div class="input-box">
+                  <button type="submit">PAY NOW</button>
+                </div>
+              </div>
+            </form>
+          </div>
 
       <div class="burger">
         <div class="line1"></div>
@@ -81,10 +172,9 @@
           </span>
           <div>
           <h3>Call Us</h3>
-          <a href="tel:+2778 934 3149">078 934 3149</a>
+          <a href="tel:+2778 934 3149">Tersia Williams - 078 934 3149</a>
           </div>
           </div>
-
 
           <div class="contact-box">
             <span class="icon">
@@ -113,33 +203,6 @@
         <i class="fa fa-instagram"></i>
       </a>
     </footer>
-    <!--<div id="map"></div>
-    <script>
-      function initMap() {
-      let options = {
-        zoom: 12,
-        center: {lat: -34.0477619, lng: 18.356681}
-      }
-      let map = new google.maps.Map(document.getElementById("map"), options);
-
-      //Add MArker
-
-      let marker = new google.maps.Marker({
-        position: {lat: -34.0583822, lng: 18.3447393},
-          map:map
-        
-      });
-
-      let infoWindow = new google.maps.infoWindow({
-        content:'<h1>Israel\'s Angels Educare</h1>'
-      });
-
-      marker.addListener('click', function(){
-        infoWindow.open(map, marker);
-      });
-     }
-    </script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ56XPSXSuLZZUuqwGN1haWLD-ECtcyyA&callback=initMap">
-    </script>-->
+    <script src="../script.js"></script>
   </body>
 </html>

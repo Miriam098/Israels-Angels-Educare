@@ -7,7 +7,7 @@
       name="description"
       content="Israel's angels &amp; crèche believe in continuous improvement, therefore our school is regularly acquiring new equipment and books. My staff are well qualified, highly experienced, and our excellent adult child ratio ensures that the children’s academic performance often exceeds that of many corporate preschools"
     />
-    <title>PROJECT 3</title>
+    <title>Israel's Angels Version 1</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -24,7 +24,6 @@
           src="/images/landscape-logo.png"
           alt="Israel's Angels Educare logo"
           class="img-logo"
-          style="height: 100px"
         />
       </div>
       <ul class="nav-links">
@@ -42,7 +41,148 @@
         </li>
       </ul>
 
-      <button class="donate-btn" id="donateBtn">Donate</button>
+      <div class="donate-modal">
+        <button class="donate-btn openModal" id="donateBtn">Donate</button>
+        <div id="buttonModal" class="modal">
+          <!--Modal Close Button-->
+
+          <span class="close">&times;</span>
+
+            <!--Form Container-->
+            <div class="wrapper">
+              <h2>Payment Form</h2>
+              <form action="" method="POST">
+                <h4>Account</h4>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      required
+                      class="name"
+                    />
+                    <i class="fa fa-user icon"></i>
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Nick Name"
+                    required
+                    class="name"
+                  />
+                  <i class="fa fa-user icon"></i>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      required
+                      class="name"
+                    />
+                    <i class="fa fa-envelope icon"></i>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <h4>Date of Birth</h4>
+                    <input type="text" placeholder="DD" class="dob" />
+                    <input type="text" placeholder="MM" class="dob" />
+                    <input type="text" placeholder="YYYY" class="dob" />
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <input
+                    type="radio"
+                    name="gender"
+                    id="b1"
+                    checked
+                    class="radio"
+                  />
+                  <label for="b1">Male</label>
+                  <input type="radio" name="gender" id="b2" class="radio" />
+                  <label for="b2">Female</label>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <h4>Payment Details</h4>
+                    <input
+                      type="radio"
+                      name="pay"
+                      id="bc1"
+                      checked
+                      class="radio"
+                    />
+                    <label for="bc1"
+                      ><span
+                        ><i class="fa fa-cc-visa"></i>Credit Card</span
+                      ></label
+                    >
+                    <input type="radio" name="pay" id="bc2" class="radio" />
+                    <label for="bc2"
+                      ><span><i class="fa fa-cc-paypal"></i>Paypal</span></label
+                    >
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <input
+                      type="tel"
+                      name=""
+                      id=""
+                      placeholder="Card Number"
+                      class="name"
+                    />
+                    <i class="fa fa-credit-card icon"></i>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <input
+                      type="tel"
+                      name=""
+                      id=""
+                      placeholder="Card CVC"
+                      required
+                      class="name"
+                    />
+                    <i class="fa fa-user icon"></i>
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <select name="" id="">
+                    <option value="">01 jun</option>
+                    <option value="">02 jun</option>
+                    <option value="">03 jun</option>
+                  </select>
+                  <select name="" id="">
+                    <option value="">2020</option>
+                    <option value="">2021</option>
+                    <option value="">2022</option>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <button type="submit">PAY NOW</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+        
+      </div>
 
       <div class="burger">
         <div class="line1"></div>
@@ -69,9 +209,8 @@
 
     <!--THIS IS THE MODALS SECTION!!-->
     <section class="image-link-container">
-      <div>
-        <h1>What we do</h1>
-      </div>
+      <h1>What we do</h1>
+
       <div class="service-boxes">
         <!--OUR PROGRAMMES MODAL-->
         <div class="image-link">
@@ -264,38 +403,51 @@
     </section>
 
     <section class="footer-section">
-      <div class="operating-hours">
-        <h4>Hours</h4>
-        <p>Monday - Friday</p>
-        <p>7AM - 5PM</p>
-        <h5>Covid Hours</h5>
-        <p>Monday - Friday</p>
-        <p>7AM - 3PM</p>
+      <div class="footer-info-container">
+        <div class="footer-about footer-info">
+          <h4>About</h4>
+          <p>
+            We are a home based daycare centre in Hout Bay, Hangberg, situated
+            behind the Sea View Apartments. We are a community driven creche
+            that provides an affordable fee to the parents of Hangberg and goes
+            over and beyond to assist them with their little ones.
+          </p>
+          <a href="/html pages/about.html" class="link-button">Learn More...</a>
+        </div>
+
+        <div class="operating-hours footer-info">
+          <h4>Hours</h4>
+          <p>Monday - Friday</p>
+          <p>7AM - 5PM</p>
+          <h5>Covid Hours</h5>
+          <p>Monday - Friday</p>
+          <p>7AM - 3PM</p>
+        </div>
+
+        <div class="quick-links footer-info">
+          <h4>Links</h4>
+          <a href="/index.html">Home</a>
+          <a href="/html pages/about.html">About</a>
+          <a href="/html pages/supporters.html">Supporters</a>
+          <a href="/html pages/contact.html">Contact</a>
+        </div>
       </div>
-      <div class="social-links">
-        <h4>Links</h4>
-        <a href="/index.html">Home</a>
-        <a href="/html pages/about.html">About</a>
-        <a href="/html pages/supporters.html">Supporters</a>
-        <a href="/html pages/contact.html">Contact</a>
-      </div>
+    </section>
+
+    <footer>
+      <h4>Get in touch</h4>
       <div class="social-media">
-        <h4>Get in touch</h4>
-        <a href="https://www.facebook.com/" class="social-icons">
+        <a href="https://www.facebook.com/israelsangels" class="social-icons">
           <i class="fa fa-facebook-official"></i>
         </a>
         <a href="https://twitter.com/home" class="social-icons">
           <i class="fa fa-twitter"></i>
         </a>
-        <a href="https://https://www.instagram.com/" class="social-icons">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="#" class="social-icons">
+        <a href="https://www.linkedin.com/feed" class="social-icons">
           <i class="fa fa-linkedin"></i>
         </a>
       </div>
-    </section>
-
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

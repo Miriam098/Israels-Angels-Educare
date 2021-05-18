@@ -51,6 +51,15 @@ btn[1].onclick = function () {
 span[1].onclick = function () {
   modals[1].style.display = "none";
 };
+
+btn[2].onclick = function () {
+  modals[2].style.display = "block";
+};
+
+// When the user clicks on <span> (x), close the modal
+span[1].onclick = function () {
+  modals[1].style.display = "none";
+};
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modals) {
