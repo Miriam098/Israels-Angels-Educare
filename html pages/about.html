@@ -44,91 +44,110 @@
       
           <!--Modal Content-->
       
-        <!--Form Container-->
-        <div class="wrapper">
-          <h2>Payment Form</h2>
-          <form action="" method="POST">
-            <h4>Account</h4>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <input type="text" placeholder="Full Name" required class="name" />
-                <i class="fa fa-user icon"></i>
-              </div>
-            </div>
-        
+      <!--Form Container-->
+      <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form action="" method="POST">
+          <h4>Account</h4>
+          <!--Full Name Input-->
+          <div class="input-group">
             <div class="input-box">
-              <input type="text" name="" id="" placeholder="Nick Name" required class="name" />
+              <input type="text" placeholder="Full Name" required class="name" />
               <i class="fa fa-user icon"></i>
             </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <input type="email" placeholder="Email Address" required class="name" />
-                <i class="fa fa-envelope icon"></i>
-              </div>
-            </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <h4>Date of Birth</h4>
-                <input type="text" placeholder="DD" class="dob" />
-                <input type="text" placeholder="MM" class="dob" />
-                <input type="text" placeholder="YYYY" class="dob" />
-              </div>
-            </div>
-        
+          </div>
+          <!--Nick Name Input-->
+          <div class="input-box">
+            <input type="text" name="" id="" placeholder="Nick Name" required class="name" />
+            <i class="fa fa-user icon"></i>
+          </div>
+          <!--Email input-->
+          <div class="input-group">
             <div class="input-box">
-              <input type="radio" name="gender" id="b1" checked class="radio" />
-              <label for="b1">Male</label>
-              <input type="radio" name="gender" id="b2" class="radio" />
-              <label for="b2">Female</label>
+              <input type="email" placeholder="Email Address" required class="name" />
+              <i class="fa fa-envelope icon"></i>
             </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <h4>Payment Details</h4>
-                <input type="radio" name="pay" id="bc1" checked class="radio" />
-                <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
-                <input type="radio" name="pay" id="bc2" class="radio" />
-                <label for="bc2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
-              </div>
-            </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <input type="tel" name="" id="" placeholder="Card Number" class="name" />
-                <i class="fa fa-credit-card icon"></i>
-              </div>
-            </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <input type="tel" name="" id="" placeholder="Card CVC" required class="name" />
-                <i class="fa fa-user icon"></i>
-              </div>
-            </div>
-        
+          </div>
+          <!--Date of Birth input-->
+          <div class="input-group">
             <div class="input-box">
-              <select name="" id="">
-                <option value="">01 jun</option>
-                <option value="">02 jun</option>
-                <option value="">03 jun</option>
-              </select>
-              <select name="" id="">
-                <option value="">2020</option>
-                <option value="">2021</option>
-                <option value="">2022</option>
-              </select>
+              <h4>Date of Birth</h4>
+              <input type="text" placeholder="DD" class="dob" id="day" />
+              <input type="text" placeholder="MM" class="dob" id="month" />
+              <input type="text" placeholder="YYYY" class="dob" id="year" />
             </div>
-        
-            <div class="input-group">
-              <div class="input-box">
-                <button type="submit">PAY NOW</button>
-              </div>
+          </div>
+          <br>
+          <!--Gender Input-->
+          <div class="input-box">
+            <input type="radio" name="gender" id="b1" checked class="radio" />
+            <label for="b1">Male</label>
+            <input type="radio" name="gender" id="b2" class="radio" />
+            <label for="b2">Female</label>
+          </div>
+          <br>
+          <!--Payment Details-->
+          <div class="input-group">
+            <br>
+      
+            <div class="input-box">
+              <br>
+              <h4>Payment Details</h4>
+              <br>
+              <input type="radio" name="pay" id="bc1" checked class="radio" />
+              <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+      
+              <input type="radio" name="pay" id="bc2" class="radio" />
+              <label for="bc2"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+      
             </div>
-          </form>
-        </div>
+      
+          </div>
+          <br>
+          <div class="credit-icon">
+            <i id="cardBrand"></i>
+          </div>
+      
+          <div class="input-group">
+            <div class="input-box">
+              <input type="tel" name="" id="" placeholder="Card Number" class="name credit-card" />
+              <i class="fa fa-credit-card icon "></i>
+            </div>
+          </div>
+      
+          <div class="input-group">
+            <div class="input-box">
+              <input type="tel" name="" id="cardCVC" placeholder="Card CVC" required class="name" />
+              <i class="fa fa-user icon"></i>
+            </div>
+          </div>
+      
+          <div class="input-box">
+            <input type="text" name="" id="" class="name donation" placeholder="Amount of Donation">
+          </div>
+          <br>
+          <div class="input-box">
+            <select name="" id="">
+              <option value="">01 jun</option>
+              <option value="">02 jun</option>
+              <option value="">03 jun</option>
+            </select>
+            <select name="" id="">
+              <option value="">2020</option>
+              <option value="">2021</option>
+              <option value="">2022</option>
+            </select>
+          </div>
+          <br>
+          <div class="input-group">
+            <div class="input-box">
+              <button type="submit">PAY NOW</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      </div>
 
       <div class="burger">
         <div class="line1"></div>

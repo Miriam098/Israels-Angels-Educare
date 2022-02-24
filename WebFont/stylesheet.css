@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Day Care';
+    src: url('DayCare-Regular.woff2') format('woff2'),
+        url('DayCare-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Party Confetti';
+    src: url('PartyConfetti-Regular.woff2') format('woff2'),
+        url('PartyConfetti-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

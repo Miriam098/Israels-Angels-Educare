@@ -7,7 +7,7 @@
 }
 
 html body {
-  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Shadows Into Light", cursive;
   font-weight: 500;
   overflow: visible;
 }
@@ -55,6 +55,8 @@ nav {
   padding-left: 50px;
 }
 
+/*DONATION BUTTON*/
+
 .donate-btn {
   background-color: #e40b5d;
   border: 2px;
@@ -64,6 +66,7 @@ nav {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -72,11 +75,12 @@ nav {
   padding: 25px;
   margin: 25px auto 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20vh;
 }
 
 .wrapper h2 {
   background-color: #fcfcfc;
-  color: #7ed321;
+  color: red;
   font-size: 24px;
   padding: 10px;
   margin-bottom: 20px;
@@ -86,7 +90,7 @@ nav {
 
 h4 {
   padding-bottom: 5px;
-  color: #7ed321;
+  color: red;
 }
 
 .input-group {
@@ -122,8 +126,8 @@ h4 {
 
 .name:focus,
 .dob:focus {
-  box-shadow: 0 0 2px 1px #7ed32180;
-  border: #7ed321;
+  box-shadow: 0 0 2px 1px rgb(73, 25, 25);
+  border: red;
 }
 
 .input-box .icon {
@@ -146,9 +150,9 @@ h4 {
 }
 
 .name:focus + .icons {
-  background-color: #7ed321;
+  background-color: red;
   color: #f1f1f1;
-  border-right: 1px solid #7ed321;
+  border-right: 1px solid red;
   border: none;
   transition: 1s;
 }
@@ -187,7 +191,7 @@ h4 {
 }
 
 .radio:checked + label {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   transition: 0.5s;
 }
@@ -205,7 +209,7 @@ h4 {
 }
 
 .input-box select:focus {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   text-align: center;
 }
@@ -214,7 +218,7 @@ button {
   width: 100%;
   background: transparent;
   border: none;
-  background: #7ed321;
+  background: red;
   color: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -224,9 +228,10 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: #5eb105;
+  background: rgb(73, 25, 25);
 }
 
+/*DONATE BUTTON MODAL*/
 .modal {
   display: none;
   position: fixed;
@@ -243,12 +248,7 @@ button:hover {
 }
 
 .modal {
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 254, 254),
-    rgb(248, 72, 72),
-    rgb(255, 254, 254)
-  );
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /*MODAL CONTENT*/
@@ -264,8 +264,8 @@ button:hover {
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 26px;
+  right: 100px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
@@ -274,7 +274,7 @@ button:hover {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #888;
   text-decoration: none;
   cursor: pointer;
 }

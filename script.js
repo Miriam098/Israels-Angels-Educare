@@ -57,8 +57,8 @@ btn[2].onclick = function () {
 };
 
 // When the user clicks on <span> (x), close the modal
-span[1].onclick = function () {
-  modals[1].style.display = "none";
+span[2].onclick = function () {
+  modals[2].style.display = "none";
 };
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
@@ -121,4 +121,73 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
   captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+var cleave = new Cleave('.credit-card', {
+    creditCard: true,
+    onCreditCardTypeChanged: function (type) {
+        const cardBrand = document.getElementsById("cardBrand"),
+        visa = "fa fa-cc-visa",
+        mastercard = "fa fa-cc-mastercard",
+        amex = "fa fa-cc-amex";
+        
+        switch (type) {
+          case "visa":
+            cardBrand.setAttribute("class", visa);
+            break;
+             case "mastercard":
+            cardBrand.setAttribute("class", mastercard);
+            break;
+             case "amex":
+            cardBrand.setAttribute("class", amex);
+            break;
+            default:
+              cardBrand.setAttribute("class", "")
+              break;
+        }
+    },
+});
+
+new Cleave(".donation", {
+  numeral: true,
+  numerlThousandGroupstyle: 'thousand'
+})
+
+var cleaveDay = new Cleave('#day', {
+    date: true,
+    datePattern: ["d"],
+    blocks: [2],
+});
+
+var cleaveMonth = new Cleave('#month', {
+    date: true,
+    datePattern: ["m"],
+    blocks: [2],
+});
+
+var cleaveYear = new Cleave('#year', {
+    date: true,
+    datePattern: ["Y"],
+});
+
+
+const cleaveCVC = new Cleave("#cardCVC", {
+  blocks: [3],
+});
+
+
+const form = document.querySelector('form');
+const completePaymentButton = document.querySelector('button#complete-payment');
+
+form.addEventListener('submit', handleFormSubmission);
+
+function handleFormSubmission(event) {
+  event.preventDefault();
+  if (form.checkValidity() === false) {
+    // Handle invalid form data.
+  } else {
+    completePaymentButton.textContent = 'Making payment...';
+    completePaymentButton.disabled = 'true';
+    setTimeout(() => {alert('Made payment!');}, 500);
+  }
 }

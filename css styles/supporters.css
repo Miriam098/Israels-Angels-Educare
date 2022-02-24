@@ -82,6 +82,8 @@ nav {
   transition: all 0.3s ease;
 }
 
+/*DONATION BUTTON*/
+
 .donate-btn {
   background-color: #e40b5d;
   border: 2px;
@@ -91,6 +93,7 @@ nav {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -99,11 +102,12 @@ nav {
   padding: 25px;
   margin: 25px auto 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20vh;
 }
 
 .wrapper h2 {
   background-color: #fcfcfc;
-  color: #7ed321;
+  color: red;
   font-size: 24px;
   padding: 10px;
   margin-bottom: 20px;
@@ -113,7 +117,7 @@ nav {
 
 h4 {
   padding-bottom: 5px;
-  color: #7ed321;
+  color: red;
 }
 
 .input-group {
@@ -149,8 +153,8 @@ h4 {
 
 .name:focus,
 .dob:focus {
-  box-shadow: 0 0 2px 1px #7ed32180;
-  border: #7ed321;
+  box-shadow: 0 0 2px 1px rgb(73, 25, 25);
+  border: red;
 }
 
 .input-box .icon {
@@ -173,9 +177,9 @@ h4 {
 }
 
 .name:focus + .icons {
-  background-color: #7ed321;
+  background-color: red;
   color: #f1f1f1;
-  border-right: 1px solid #7ed321;
+  border-right: 1px solid red;
   border: none;
   transition: 1s;
 }
@@ -214,7 +218,7 @@ h4 {
 }
 
 .radio:checked + label {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   transition: 0.5s;
 }
@@ -232,7 +236,7 @@ h4 {
 }
 
 .input-box select:focus {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   text-align: center;
 }
@@ -241,7 +245,7 @@ button {
   width: 100%;
   background: transparent;
   border: none;
-  background: #7ed321;
+  background: red;
   color: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -251,8 +255,10 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: #5eb105;
+  background: rgb(73, 25, 25);
 }
+
+/*BUTTON MODAL*/
 
 .modal {
   display: none; /* Hidden by default */
@@ -276,19 +282,21 @@ button:hover {
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+.close {
+  position: absolute;
+  top: 26px;
+  right: 100px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.close:hover,
+.close:focus {
+  color: #888;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Slideshow container */
@@ -301,8 +309,11 @@ button:hover {
 }
 
 .banner img {
-  height: 75vh;
   width: 100%;
+  height: 72vh;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 32px;
 }
 
 /* Next & previous buttons */

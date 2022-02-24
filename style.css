@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Berkshire+Swash&family=Kaushan+Script&family=Sedgwick+Ave&family=Sriracha&display=swap");
+@font-face {
+  font-family: "Party Confetti";
+  src: url("/WebFont/PartyConfetti-Regular.woff") format("woff"),
+    url("/WebFont/PartyConfetti-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +15,9 @@
 
 body,
 html {
-  font-family: "Berkshire Swash", cursive;
+  font-family: "Party Confetti";
+  font-weight: normal;
+  font-style: normal;
   font-weight: 500;
   height: 100%;
   letter-spacing: 3px;
@@ -21,7 +31,6 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   background-color: #fff;
   box-shadow: 0 8px 6px -6px red;
   position: fixed;
@@ -94,11 +103,12 @@ nav {
   padding: 25px;
   margin: 25px auto 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20vh;
 }
 
 .wrapper h2 {
   background-color: #fcfcfc;
-  color: #7ed321;
+  color: red;
   font-size: 24px;
   padding: 10px;
   margin-bottom: 20px;
@@ -108,7 +118,7 @@ nav {
 
 h4 {
   padding-bottom: 5px;
-  color: #7ed321;
+  color: red;
 }
 
 .input-group {
@@ -144,8 +154,8 @@ h4 {
 
 .name:focus,
 .dob:focus {
-  box-shadow: 0 0 2px 1px #7ed32180;
-  border: #7ed321;
+  box-shadow: 0 0 2px 1px rgb(73, 25, 25);
+  border: red;
 }
 
 .input-box .icon {
@@ -168,9 +178,9 @@ h4 {
 }
 
 .name:focus + .icons {
-  background-color: #7ed321;
+  background-color: red;
   color: #f1f1f1;
-  border-right: 1px solid #7ed321;
+  border-right: 1px solid red;
   border: none;
   transition: 1s;
 }
@@ -209,7 +219,7 @@ h4 {
 }
 
 .radio:checked + label {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   transition: 0.5s;
 }
@@ -227,7 +237,7 @@ h4 {
 }
 
 .input-box select:focus {
-  background-color: #7ed321;
+  background-color: red;
   color: #fff;
   text-align: center;
 }
@@ -236,7 +246,7 @@ button {
   width: 100%;
   background: transparent;
   border: none;
-  background: #7ed321;
+  background: red;
   color: #fff;
   padding: 15px;
   border-radius: 4px;
@@ -246,7 +256,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background: #5eb105;
+  background: rgb(73, 25, 25);
 }
 
 /*BURGER MENU */
@@ -339,7 +349,7 @@ button:hover {
   background-image: linear-gradient(
     to right,
     rgba(255, 254, 254, 0.5),
-    rgba(0, 0, 128, 0.452)
+    #c9645e
   );
   text-align: center;
   font-size: 16px;
@@ -361,6 +371,11 @@ button:hover {
   border: white 2px solid;
 }
 
+/*MAIN CONTENT CONTAINER*/
+.main-content {
+  margin-bottom: 15vh;
+}
+
 /*IMAGE CARDS*/
 
 .image-link-container {
@@ -371,15 +386,16 @@ button:hover {
   height: 50%;
 }
 
-.image-link-container > h1 {
+.image-link-container > h2 {
   text-align: center;
   margin: 0 20px 20px 20px;
+  color: red;
 }
 
 .service-boxes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 h3 {
@@ -396,7 +412,7 @@ h3 {
   background-image: linear-gradient(
     to right,
     rgba(255, 254, 254, 0.5),
-    rgba(0, 0, 128, 0.452)
+    rgba(248, 72, 72, 0.5)
   );
 }
 
@@ -444,17 +460,11 @@ h3 {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 }
 
 .modal {
-  background-image: linear-gradient(
-    to right,
-    rgb(255, 254, 254),
-    rgb(248, 72, 72),
-    rgb(255, 254, 254)
-  );
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /*MODAL CONTENT*/
@@ -492,8 +502,8 @@ h3 {
 .closeGallaryModal,
 .parents-close-btn {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 26px;
+  right: 100px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
@@ -634,7 +644,7 @@ img.hover-shadow {
   display: flex;
   flex-direction: column;
   border-top: 3px red solid;
-  height: 40vh;
+  height: 100%;
   padding: 0 20px;
 }
 
@@ -646,13 +656,15 @@ img.hover-shadow {
 .footer-info-container {
   display: flex;
   flex-direction: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 30px;
+  margin-bottom: 12vh;
 }
 
 .footer-info {
   text-align: center;
-  width: 25%;
+  width: 100%;
+  height: 100%;
 }
 
 .quick-links {
@@ -673,6 +685,7 @@ footer {
   left: 0;
   z-index: 1030;
   padding: 10px;
+  height: 13vh;
 }
 
 footer .social-icons,
@@ -686,7 +699,7 @@ h4 {
 }
 
 /*MEDIA QUERIES*/
-
+/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -695,7 +708,7 @@ h4 {
     position: absolute;
     right: 0;
     height: 92vh;
-    top: 8vh;
+    top: 0;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -705,16 +718,33 @@ h4 {
     transition: transform 0.5s ease-in;
   }
   .nav-links li {
+    display: flex;
+    align-items: center;
     opacity: 0;
   }
   .nav-links li:not(:last-child)::after {
     display: none;
   }
+
   .donate-btn {
     display: none;
   }
   .burger {
     display: block;
+  }
+
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallary-modal-content {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 30px;
   }
 }
 
@@ -747,40 +777,115 @@ h4 {
 
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 600px) {
-  .example {
-    background: red;
+@media only screen and (max-width: 667px) {
+  .nav {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .nav-links {
+    width: 100%;
+    background-image: url(./images/KidsDrawings/drawing-1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-logo {
+    height: 11vh;
+  }
+
+  .banner-container {
+    top: 0;
+    margin-top: 12vh;
+    padding: 30px;
+  }
+
+  .banner-text {
+    text-shadow: 1.5px 1px #000000;
+  }
+
+  .banner-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .text2 {
+    font-size: 1.6rem;
+    color: palevioletred;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .modal {
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close {
+    top: 5px;
+    right: 10px;
+    color: #000;
+  }
+
+  .numbertext {
+    color: #000;
+  }
+
+  footer {
+    height: 10vh;
+    padding: 0;
+  }
+
+  footer .social-icons,
+  h4 {
+    font-size: initial;
+  }
+
+  .image-link-container h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.17rem;
+  }
+
+  .image-link {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+    margin-bottom: 12vh;
+    bottom: 0;
+  }
+
+  .footer-section {
+    padding: 0;
+  }
+
+  .footer-info {
+    width: 100%;
+    height: 100%;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media only screen and (min-width: 600px) {
-  .example {
-    background: green;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-
-@media only screen and (min-width: 768px) {
-  .example {
-    background: blue;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) {
-  .example {
-    background: orange;
-  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-@media only screen and (min-width: 1200px) {
-  .example {
-    background: pink;
-  }
+@media only screen and (min-width: 1024) {
 }

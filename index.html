@@ -13,32 +13,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+<link rel="preload" href="/WebFont/PartyConfetti-Regular.woff2" as="font" type="font/woff2" crossorigin>
+
   </head>
 
   <body>
     <!--NAVBAR-->
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-<script>
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: 'v10.0'
-    });
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<!-- Your Chat Plugin code -->
-<div class="fb-customerchat" attribution="biz_inbox" page_id="105714044864338">
-</div>
     <nav>
       <div class="logo">
         <img
@@ -74,7 +54,7 @@
               <h2>Payment Form</h2>
               <form action="" method="POST">
                 <h4>Account</h4>
-
+                <!--Full Name Input-->
                 <div class="input-group">
                   <div class="input-box">
                     <input
@@ -86,7 +66,7 @@
                     <i class="fa fa-user icon"></i>
                   </div>
                 </div>
-
+                <!--Nick Name Input-->
                 <div class="input-box">
                   <input
                     type="text"
@@ -98,7 +78,7 @@
                   />
                   <i class="fa fa-user icon"></i>
                 </div>
-
+                <!--Email input-->
                 <div class="input-group">
                   <div class="input-box">
                     <input
@@ -110,16 +90,17 @@
                     <i class="fa fa-envelope icon"></i>
                   </div>
                 </div>
-
+                <!--Date of Birth input-->
                 <div class="input-group">
                   <div class="input-box">
                     <h4>Date of Birth</h4>
-                    <input type="text" placeholder="DD" class="dob" />
-                    <input type="text" placeholder="MM" class="dob" />
-                    <input type="text" placeholder="YYYY" class="dob" />
+                    <input type="text" placeholder="DD" class="dob" id="day"/>
+                    <input type="text" placeholder="MM" class="dob" id="month"/>
+                    <input type="text" placeholder="YYYY" class="dob" id="year"/>
                   </div>
                 </div>
-
+                <br>
+                <!--Gender Input-->
                 <div class="input-box">
                   <input
                     type="radio"
@@ -132,10 +113,15 @@
                   <input type="radio" name="gender" id="b2" class="radio" />
                   <label for="b2">Female</label>
                 </div>
-
+                <br>
+                <!--Payment Details-->
                 <div class="input-group">
+                  <br>
+                
                   <div class="input-box">
+                    <br>
                     <h4>Payment Details</h4>
+                <br>
                     <input
                       type="radio"
                       name="pay"
@@ -148,11 +134,18 @@
                         ><i class="fa fa-cc-visa"></i>Credit Card</span
                       ></label
                     >
+             
                     <input type="radio" name="pay" id="bc2" class="radio" />
                     <label for="bc2"
                       ><span><i class="fa fa-cc-paypal"></i>Paypal</span></label
                     >
+                    
                   </div>
+            
+                </div>
+                <br>
+                <div class="credit-icon">
+                  <i id="cardBrand"></i>
                 </div>
 
                 <div class="input-group">
@@ -162,9 +155,9 @@
                       name=""
                       id=""
                       placeholder="Card Number"
-                      class="name"
+                      class="name credit-card"
                     />
-                    <i class="fa fa-credit-card icon"></i>
+                    <i class="fa fa-credit-card icon "></i>
                   </div>
                 </div>
 
@@ -173,7 +166,7 @@
                     <input
                       type="tel"
                       name=""
-                      id=""
+                      id="cardCVC"
                       placeholder="Card CVC"
                       required
                       class="name"
@@ -182,6 +175,10 @@
                   </div>
                 </div>
 
+                <div class="input-box">
+                  <input type="text" name="" id="" class="name donation" placeholder="Amount of Donation">
+                </div>
+                <br>
                 <div class="input-box">
                   <select name="" id="">
                     <option value="">01 jun</option>
@@ -194,7 +191,7 @@
                     <option value="">2022</option>
                   </select>
                 </div>
-
+                <br>
                 <div class="input-group">
                   <div class="input-box">
                     <button type="submit">PAY NOW</button>
@@ -217,7 +214,7 @@
     <!--BANNER-->
     <div class="banner-container">
       <div class="banner-text">
-        <h1>Welcome to <span class="text2">Israel's Angels</span></h1>
+        <h1>Welcome to <span class="text2">Israel's Angels Educare Center</span></h1>
         <p>
           Our goal is to provide a complete nurturing environment for the growth
           and development of our little angels
@@ -229,8 +226,9 @@
     <!--END OF BANNER-->
 
     <!--THIS IS THE MODALS SECTION!!-->
+    <main class="main-content">
     <section class="image-link-container">
-      <h1>What we do</h1>
+      <h2>What we do</h2>
 
       <div class="service-boxes">
         <!--OUR PROGRAMMES MODAL-->
@@ -454,6 +452,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <footer>
       <h4>Get in touch</h4>
@@ -469,6 +468,10 @@
         </a>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"
+      integrity="sha512-KaIyHb30iXTXfGyI9cyKFUIRSSuekJt6/vqXtyQKhQP6ozZEGY8nOtRS6fExqE4+RbYHus2yGyYg1BrqxzV6YA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="cc.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
