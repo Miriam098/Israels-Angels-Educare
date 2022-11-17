@@ -1,15 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Berkshire+Swash&family=Gloria+Hallelujah&family=Kaushan+Script&family=Sedgwick+Ave&family=Sriracha&display=swap");
+@font-face {
+  font-family: "Party Confetti";
+  src: url("/WebFont/PartyConfetti-Regular.woff") format("woff"),
+    url("/WebFont/PartyConfetti-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: red;
 }
 
-html body {
-  font-family: "Shadows Into Light", cursive;
+body,
+html {
+  font-family: "Party Confetti";
+  font-weight: normal;
+  font-style: normal;
   font-weight: 500;
-  overflow: visible;
+  height: 100%;
+  letter-spacing: 3px;
 }
 
 nav {
@@ -295,12 +306,13 @@ button:hover {
 main {
   display: flex;
   flex-direction: column;
-  font-family: "Gloria Hallelujah", cursive;
   margin-top: 10vh;
+  color: red;
 }
 
 main > section {
   padding: 30px;
+  color: red;
 }
 
 iframe {
@@ -380,6 +392,8 @@ footer > .social-icons {
   padding: 30px;
 }
 
+/*MEDIA QUERIES*/
+/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -388,7 +402,7 @@ footer > .social-icons {
     position: absolute;
     right: 0;
     height: 92vh;
-    top: 8vh;
+    top: 0;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -398,19 +412,33 @@ footer > .social-icons {
     transition: transform 0.5s ease-in;
   }
   .nav-links li {
+    display: flex;
+    align-items: center;
     opacity: 0;
   }
-
   .nav-links li:not(:last-child)::after {
     display: none;
   }
 
+  .donate-btn {
+    display: none;
+  }
   .burger {
     display: block;
   }
 
-  .donate-btn {
-    display: none;
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallary-modal-content {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 30px;
   }
 }
 
@@ -439,4 +467,119 @@ footer > .social-icons {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 667px) {
+  .nav {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .nav-links {
+    width: 100%;
+    background-image: url(./images/KidsDrawings/drawing-1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-logo {
+    height: 11vh;
+  }
+
+  .banner-container {
+    top: 0;
+    margin-top: 12vh;
+    padding: 30px;
+  }
+
+  .banner-text {
+    text-shadow: 1.5px 1px #000000;
+  }
+
+  .banner-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .text2 {
+    font-size: 1.6rem;
+    color: palevioletred;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .modal {
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close {
+    top: 5px;
+    right: 10px;
+    color: #000;
+  }
+
+  .numbertext {
+    color: #000;
+  }
+
+  footer {
+    height: 10vh;
+    padding: 0;
+  }
+
+  footer .social-icons,
+  h4 {
+    font-size: initial;
+  }
+
+  .image-link-container h2 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 1.17rem;
+  }
+
+  .image-link {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+    margin-bottom: 12vh;
+    bottom: 0;
+  }
+
+  .footer-section {
+    padding: 0;
+  }
+
+  .footer-info {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1024) {
 }

@@ -1,21 +1,36 @@
+@font-face {
+  font-family: "Party Confetti";
+  src: url("/WebFont/PartyConfetti-Regular.woff") format("woff"),
+    url("/WebFont/PartyConfetti-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Shadows Into Light", cursive;
+body,
+html {
+  font-family: "Party Confetti";
+  font-weight: normal;
+  font-style: normal;
   font-weight: 500;
-  height: 100%;
+  letter-spacing: 3px;
   background-image: linear-gradient(
     to right,
     rgba(255, 254, 254, 0.5),
     rgba(248, 72, 72, 0.5),
     rgba(255, 254, 254, 0.5)
   );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
@@ -81,23 +96,11 @@ nav {
   text-decoration: none;
   display: inline-block;
   font-size: 1em;
+  cursor: pointer;
 }
 
 .donate-btn:hover {
   background-color: navy;
-}
-
-/*Donate form*/
-donate-btn {
-  background-color: #e40b5d;
-  border: 2px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
-  cursor: pointer;
 }
 
 .wrapper {
@@ -348,17 +351,29 @@ button:hover {
   padding: 20px;
   overflow-wrap: break-word;
   height: 100%;
+  width: 60vw;
 }
 
 .about-text-box p {
   font-size: 1.2em;
   line-height: 1.6em;
   padding: 20px;
+  height: 85vh;
+  overflow: scroll;
+}
+
+.read-more-btn {
+  display: none;
+}
+
+.portrait-container {
+  width: 40vw;
+  height: 100%;
 }
 
 .portrait {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 40%;
+  width: 80%;
   height: 100%;
 }
 
@@ -375,6 +390,8 @@ button:hover {
 /*Staff section */
 .image-card-section {
   height: 100%;
+  width: 80%;
+  margin: auto;
 }
 .row-2 {
   display: flex;
@@ -394,6 +411,7 @@ button:hover {
 .avatar-img {
   height: 300px;
   width: 100%;
+  object-fit: contain;
 }
 
 .image-card {
@@ -458,6 +476,8 @@ footer > .social-icons {
   padding: 30px;
 }
 
+/*MEDIA QUERIES*/
+/* Medium devices (landscape tablets, 768px and up) */
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -466,7 +486,7 @@ footer > .social-icons {
     position: absolute;
     right: 0;
     height: 92vh;
-    top: 8vh;
+    top: 0;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -476,11 +496,14 @@ footer > .social-icons {
     transition: transform 0.5s ease-in;
   }
   .nav-links li {
+    display: flex;
+    align-items: center;
     opacity: 0;
   }
   .nav-links li:not(:last-child)::after {
     display: none;
   }
+
   .donate-btn {
     display: none;
   }
@@ -488,11 +511,18 @@ footer > .social-icons {
     display: block;
   }
 
-  .about-container {
+  .service-boxes {
     flex-direction: column;
+    align-items: center;
   }
-  .portrait {
-    margin: auto;
+
+  .gallary-modal-content {
+    width: 100%;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 30px;
   }
 }
 
@@ -521,4 +551,94 @@ footer > .social-icons {
 
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 667px) {
+  .nav {
+    width: 100%;
+    height: 12vh;
+  }
+
+  .nav-links {
+    width: 100%;
+    background-image: url(./images/KidsDrawings/drawing-1.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-logo {
+    height: 11vh;
+  }
+
+  .main-container {
+    margin-top: 10vh;
+  }
+
+  .about-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .portrait-container {
+    width: 100%;
+  }
+
+  .portrait {
+    width: 100%;
+  }
+
+  .about-text-box {
+    width: 100vw;
+  }
+
+  .read-more-btn {
+    display: block;
+  }
+
+  .read-more {
+    display: none;
+  }
+
+  .image-card-section {
+    display: flex;
+  }
+
+  .row-2 {
+    flex-direction: column;
+  }
+
+  footer {
+    height: 10vh;
+    padding: 0;
+  }
+
+  .footer-info-container {
+    flex-direction: column;
+    margin-bottom: 12vh;
+    bottom: 0;
+  }
+
+  .footer-section {
+    padding: 0;
+  }
+
+  .footer-info {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1024) {
 }

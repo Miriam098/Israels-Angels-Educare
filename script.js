@@ -191,3 +191,4 @@ function handleFormSubmission(event) {
     setTimeout(() => {alert('Made payment!');}, 500);
   }
 }
+
